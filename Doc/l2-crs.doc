@@ -1,0 +1,79 @@
+<set curtag red>Description:
+<set curtag reg>
+ Error message. An error condition from the port connected to the robot.
+ Usualy comes from communication error.
+<set curtag red>Description:
+<set curtag reg>
+ Global variable. It is t when the link to the robot is on.
+<set curtag red>Synopsis:<set curtag reg>
+ conveyor_init()
+
+<set curtag red>Description:<set curtag reg>
+ Opens communications with the CRS arm. Sets some usefull defaults
+
+
+<set curtag red>SEE ALSO:
+	<set curtag See> conveyor_quit
+<set curtag red>
+
+Examples:<set curtag reg>
+ conveyor_init();
+<set curtag red>Synopsis:<set curtag reg>
+ conveyor_quit()
+
+<set curtag red>Description:<set curtag reg>
+ Close the connection to the robot
+
+
+<set curtag red>SEE ALSO:
+	<set curtag See> conveyor_init
+<set curtag red>
+
+Examples:<set curtag reg>
+ conveyor_quit()
+<set curtag red>Synopsis:<set curtag reg>
+ write_cmnd<$t insert end {(<} $curtag>str>)
+
+<set curtag red>Description:<set curtag reg>
+ Write a command<$t insert end { <} $curtag>str> to the output port.<$t insert end { <} $curtag>str> is a string.
+ It then checks for reply. It returns t on success.
+
+
+<set curtag red>SEE ALSO:
+	<set curtag See> rob_init
+<set curtag red>
+
+Examples:<set curtag reg>
+ write_cmnd("READY");
+<set curtag red>Synopsis:<set curtag reg>
+ move()
+
+<set curtag red>Description:<set curtag reg>
+ Performs a cartesian movement on the arm, by interpolating the
+ motions between several joints.<$t insert end { <} $curtag>float1><$t insert end {,<} $curtag>float2><$t insert end {,<} $curtag>float3> represent
+ relative displacements for axes X, Y, Z. The interpolation is done
+ in the CRS controller.
+
+
+<set curtag red>SEE ALSO:
+	<set curtag See> joint
+<set curtag red>
+
+Examples:<set curtag reg>
+ move();
+<set curtag red>Synopsis:<set curtag reg>
+ res()
+
+<set curtag red>Description:<set curtag reg>
+ Performs a cartesian movement on the arm, by interpolating the
+ motions between several joints.<$t insert end { <} $curtag>float1><$t insert end {,<} $curtag>float2><$t insert end {,<} $curtag>float3> represent
+ relative displacements for axes X, Y, Z. The interpolation is done
+ in the CRS controller.
+
+
+<set curtag red>SEE ALSO:
+	<set curtag See> joint
+<set curtag red>
+
+Examples:<set curtag reg>
+ res();
